@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from src.router import get_blog_router,post_blog_router,user_router,get_single_blogs,get_all_user_router,get_single_users
+from src.router import update_user,update_blog,delete_user
 from src.database import engine,SQLModel
 from src.models import blog_model,user_model
 
@@ -17,3 +18,6 @@ app.include_router(user_router)
 app.include_router(get_single_blogs)
 app.include_router(get_all_user_router)
 app.include_router(get_single_users)
+app.include_router(update_user)
+app.include_router(update_user)
+app.include_router(delete_user)
